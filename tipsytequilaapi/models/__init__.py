@@ -5,3 +5,4 @@ from .product import Product
 from .review import Review
 from .rating import Rating
 from .product_rating import ProductRating
+from .product_review import ProductReview

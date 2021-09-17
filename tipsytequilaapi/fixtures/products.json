@@ -1,0 +1,28 @@
+[
+    {
+        "model": "tipsytequilaapi.product",
+        "pk": 1,
+        "fields": {
+            "name": "Patron Silver",
+            "customer_id": 1,
+            "price": 59.99,
+            "description": "Patrón Silver is a blend of two very differently produced triple distilled tequilas - one made using a traditional tahona and fermented with agave fibres, the other made using a modern roller shredder. The blend is packaged in hand-blown individually numbered bottles.",
+            "quantity": 3,
+            "created_date": "2019-05-21",
+            "image_path": ""
+        }
+    },
+    {
+        "model": "tipsytequilaapi.product",
+        "pk": 2,
+        "fields": {
+            "name": "Don Julio 1924",
+            "customer_id": 2,
+            "price": 199.99,
+            "description": "Don Julio 1942 Añejo Tequila is handcrafted in tribute to the year that Don Julio González began his tequila-making journey. Warm oak, vanilla and roasted agave flavors lead into a lingering oak and rich vanilla finish for a luxurious tequila recognized by connoisseurs around the globe.",
+            "quantity": 1,
+            "created_date": "2019-07-10",
+            "image_path": ""
+        }
+    }
+]

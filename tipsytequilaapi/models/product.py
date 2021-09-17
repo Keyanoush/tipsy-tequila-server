@@ -10,7 +10,7 @@ class Product(SafeDeleteModel):
         Customer, on_delete=models.DO_NOTHING, related_name='products')
     price = models.FloatField(
         validators=[MinValueValidator(0.00), MaxValueValidator(10000.00)],)
-    description = models.CharField(max_length=255,)
+    description = models.CharField(max_length=555,)
     quantity = models.IntegerField(validators=[MinValueValidator(0)],)
     created_date = models.DateField(auto_now_add=True)
     image_path = models.ImageField(

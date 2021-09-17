@@ -1,0 +1,38 @@
+[
+    {
+        "model": "tipsytequilaapi.customer",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "phone_number": "555-7777",
+            "address": "615 Falls Lane"
+        }
+    },
+    {
+        "model": "tipsytequilaapi.customer",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "phone_number": "555-7777",
+            "address": "615 Old Town Road"
+        }
+    },
+    {
+        "model": "tipsytequilaapi.customer",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "phone_number": "555-7777",
+            "address": "615 Infinity Lane"
+        }
+    },
+    {
+        "model": "tipsytequilaapi.customer",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "phone_number": "555-7777",
+            "address": "615 Royal Lane"
+        }
+    }
+    ]

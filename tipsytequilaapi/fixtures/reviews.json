@@ -1,0 +1,16 @@
+[
+    {
+        "model": "tipsytequilaapi.product",
+        "pk": 1,
+        "fields": {
+            "description": "Patrón silver is pricey for its category, but it’s also an excellent tequila that works beautifully as a mixer and is eye-opening to sip. It’s a little pricey for an everyday tequila, but it’s worth having on the shelf for special occasions."
+        }
+    },
+    {
+        "model": "tipsytequilaapi.product",
+        "pk": 2,
+        "fields": {
+            "description": "Don Julio 1942 Añejo is a pleasant, sippable tequila. It strays a bit from the norm but is a welcome addition to the añejo category. It’s also an easy (if expensive) entry point for newcomers to the aged tequila category. Instead of appealing to scotch or bourbon drinkers, as many añejos and extra añejos aim to do, this one might instead attract cognac or aged-rum fans."
+        }
+    }
+]

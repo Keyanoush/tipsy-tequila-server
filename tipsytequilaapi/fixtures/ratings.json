@@ -1,0 +1,16 @@
+[
+    {
+        "model": "tipsytequilaapi.ratings",
+        "pk": 1,
+        "fields": {
+            "rating": 4
+        }
+    },
+    {
+        "model": "tipsytequilaapi.ratings",
+        "pk": 2,
+        "fields": {
+            "rating": 5
+        }
+    }
+]

@@ -5,4 +5,12 @@
         "--load-plugins=pylint_django",
         "--django-settings-module=levelup.settings",
     ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "tipsytequila",
+            "database": "db.sqlite3"
+        }
+    ],
 }
