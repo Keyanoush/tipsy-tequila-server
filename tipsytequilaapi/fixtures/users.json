@@ -1,0 +1,74 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "kevin",
+            "first_name": "Kevin",
+            "last_name": "King",
+            "email": "kevin@king.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T19:12:13.676Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$GviXrBarvuwF$gzlskakTbrLRnnJxv2UKsJlvCA2A5u5CjFcrdXjDAVM=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "joe",
+            "first_name": "Joe",
+            "last_name": "Shepherd",
+            "email": "joe@shepherd.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T22:47:43.564Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$fpOjFWJQRWRe$98+6dDrxFfYX191Hlk+lD3fTvmCnDbOQ4Wn4L+pTqTk=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "karl",
+            "first_name": "Karl",
+            "last_name": "Davidson",
+            "email": "karl@davidson.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T22:48:19.899Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$150000$HBu8sLcgV3lh$o2p9+aH/F9Dk9tIztT2CJDQs5R1gEt925BoKM/XzNXQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "kasper",
+            "first_name": "Kasper",
+            "last_name": "Namjoupanah",
+            "email": "kasper@namjoupanah.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-10-10T22:48:53.984Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+    ]
