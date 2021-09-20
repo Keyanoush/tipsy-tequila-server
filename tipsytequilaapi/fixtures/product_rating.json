@@ -3,16 +3,16 @@
         "model": "tipsytequilaapi.productrating",
         "pk": 1,
         "fields": {
-            "product": 1,
-            "customer": 1
+            "product_id": 1,
+            "customer_id": 1
         }
     },
     {
         "model": "tipsytequilaapi.productrating",
         "pk": 2,
         "fields": {
-            "product": 2,
-            "customer": 2
+            "product_id": 2,
+            "customer_id": 2
         }
     }
 ]

@@ -3,7 +3,7 @@ from django.db import models
 from .customer import Customer
 
 
-class Product(SafeDeleteModel):
+class Product(models.Model):
 
     name = models.CharField(max_length=50,)
     customer = models.ForeignKey(

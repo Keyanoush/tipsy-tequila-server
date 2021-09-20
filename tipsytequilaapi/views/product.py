@@ -8,7 +8,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from tipsytequilaapi.models import Product, Customer, ProductCategory
+from tipsytequilaapi.models import Product, Customer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.parsers import MultiPartParser, FormParser
 
@@ -18,8 +18,7 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = ('id', 'name', 'price', 'description',
-                  'quantity', 'created_date', 'image_path',
-                  'rating', )
+                  'quantity', 'created_date', 'image_path', )
         depth = 1
 
 
@@ -79,8 +78,6 @@ class Products(ViewSet):
         customer = Customer.objects.get(user=request.auth.user)
         new_product.customer = customer
 
-        product_category = ProductCategory.objects.get(pk=request.data["category_id"])
-        new_product.category = product_category
 
         if "image_path" in request.data:
             format, imgstr = request.data["image_path"].split(';base64,')
@@ -110,18 +107,15 @@ class Products(ViewSet):
         @apiSuccess (200) {Number} product.quantity Number of items to sell
         @apiSuccess (200) {Date} product.created_date City where product is located
         @apiSuccess (200) {String} product.image_path Path to product image
-        @apiSuccess (200) {Number} product.rating Average customer rating of product
         @apiSuccessExample {json} Success
             {
                 "id": 101,
-                "url": "http://localhost:8000/products/101",
                 "name": "Kite",
                 "price": 14.99,
                 "description": "It flies high",
                 "quantity": 60,
                 "created_date": "2019-10-23",
                 "image_path": null,
-                "rating": 0,
             }
         """
         try:
@@ -191,19 +185,23 @@ class Products(ViewSet):
             [
                 {
                     "id": 101,
-                    "url": "http://localhost:8000/products/101",
                     "name": "Kite",
                     "price": 14.99,
                     "description": "It flies high",
                     "quantity": 60,
                     "created_date": "2019-10-23",
                     "image_path": null,
-                    "rating": 0,
                 }
             ]
         """
-        products = Product.objects.all()
-
+        try:
+            products = Product.objects.all()
+            serializer = ProductSerializer(products, many=True, context={'request': request})
+            
+            return Response(serializer.data)
+        
+        except Exception as ex:
+            return HttpResponseServerError(ex)
         # Support filtering by category and/or quantity
 #        quantity = self.request.query_params.get('quantity', None)
 #        order = self.request.query_params.get('order_by', None)
@@ -248,6 +246,6 @@ class Products(ViewSet):
 #
 #            rec.save()
 #
-#            return Response(None, status=status.HTTP_204_NO_CONTENT)
-#
-#        return Response(None, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+#        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+        
