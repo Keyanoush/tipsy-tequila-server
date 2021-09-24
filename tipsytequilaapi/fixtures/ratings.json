@@ -3,14 +3,14 @@
         "model": "tipsytequilaapi.rating",
         "pk": 1,
         "fields": {
-            "rating": 4
+            "score": 4
         }
     },
     {
         "model": "tipsytequilaapi.rating",
         "pk": 2,
         "fields": {
-            "rating": 5
+            "score": 5
         }
     }
 ]

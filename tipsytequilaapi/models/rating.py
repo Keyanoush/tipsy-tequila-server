@@ -5,4 +5,4 @@ from .product import Product
 
 class Rating(models.Model):
 
-    rating = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)],)
+    score = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)],)

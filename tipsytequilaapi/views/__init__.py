@@ -4,3 +4,6 @@ from .order import Orders
 from .product import Products
 from .customer import Customers
 from .user import Users
+from .rating import Ratings
+from .review import Reviews
+from .order_product import OrderProduct

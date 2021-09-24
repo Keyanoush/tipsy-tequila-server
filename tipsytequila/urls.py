@@ -1,3 +1,4 @@
+from tipsytequilaapi.views.order_product import OrderProducts
 from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
@@ -12,6 +13,10 @@ router.register(r'products', Products, 'product')
 router.register(r'customers', Customers, 'customer')
 router.register(r'users', Users, 'user')
 router.register(r'orders', Orders, 'order')
+router.register(r'ratings', Ratings, 'rating')
+router.register(r'reviews', Reviews, 'review')
+router.register(r'orderproducts', OrderProducts, 'orderproduct')
+
 
 
 # Wire up our API using automatic URL routing.
