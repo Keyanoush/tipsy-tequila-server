@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "product_id": 1,
-            "customer_id": 1
+            "rating_id": 1
         }
     },
     {
@@ -12,7 +12,7 @@
         "pk": 2,
         "fields": {
             "product_id": 2,
-            "customer_id": 2
+            "rating_id": 2
         }
     }
 ]

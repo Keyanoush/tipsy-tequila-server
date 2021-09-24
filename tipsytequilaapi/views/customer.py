@@ -40,3 +40,34 @@ class Customers(ViewSet):
         customer.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+    def list(self, request):
+        """
+        @api {GET} /customers GET customer customers
+        @apiName GetCustomers
+        @apiGroup Customers
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611
+        @apiSuccess (200) {Object[]} customers Array of customer objects
+        @apiSuccess (200) {id} customers.id Customer id
+        @apiSuccess (200) {String} customers.url Customer URI
+        @apiSuccess (200) {String} customers.created_date Date customer was created
+        @apiSuccess (200) {String} customers.customer Customer URI
+        @apiSuccessExample {json} Success
+            [
+                {
+                    "id": 1,
+                    "url": "http://localhost:8000/customers/1",
+                    "created_date": "2019-08-16",
+                    "customer": "http://localhost:8000/customers/5"
+                }
+            ]
+        """
+        customer = Customer.objects.get(user=request.auth.user)
+        customers = Customer.objects.all()
+
+        json_customers = CustomerSerializer(
+            customers, many=True, context={'request': request})
+
+        return Response(json_customers.data)
